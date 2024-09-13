@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Run Gun - Legendary-games</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <nav class="navbar">
         <ul>
             <li><a href="index.html">Home</a></li>
-            <li><a href="#">Categorias</a></li>
+            <li><a href="game-list.html">all games</a></li>
             <li><a href="#">Favoritos</a></li>
             <li><a href="#">Sobre</a></li>
         </ul>

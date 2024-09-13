@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> Legendary Games </title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <nav class="navbar">
         <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="#">Categorias</a></li>
+            <li><a href="index.html">Home/scratchs</a></li>
+            <li><a href="game-list.html">all games</a></li>
             <li><a href="#">Favoritos</a></li>
             <li><a href="#">Sobre</a></li>
         </ul>
@@ -23,6 +23,22 @@
         </header>
 
         <section id="game-list">
+            <div class="game" onclick="openGame('thechaosfactory.html')">
+                <p class="game-title">the chaos factory</p>
+                <img src="thechaosfactory.png" alt="Jogo 2">               
+            </div>
+            <div class="game" onclick="openGame('pong.html')">
+                <p class="game-title">pong</p>
+                <img src="pong.png" alt="Jogo 2">               
+            </div>
+            <div class="game" onclick="openGame('boliche.html')">
+                <p class="game-title">boliche</p>
+                <img src="boliche.png" alt="Jogo 2">               
+            </div>
+            <div class="game" onclick="openGame('cowboy.html')">
+                <p class="game-title">cow boy</p>
+                <img src="cowboy.png" alt="Jogo 2">               
+            </div>
             <div class="game" onclick="openGame('arena.html')">                <p class="game-title">Arena</p>
 
                 <img src="arena.png" alt="Jogo 1">
@@ -35,6 +51,7 @@
                 <p class="game-title">Run Gun</p>
                 <img src="rungun.png" alt="Jogo 2">               
             </div>
+
             <!-- Mais jogos -->
         </section>
     </div>

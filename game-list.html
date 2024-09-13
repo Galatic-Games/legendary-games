@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Play the best games on Legendary Games!">
+    <meta name="keywords" content="games, play, fun, online games, Legendary Games">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <style>
+        :root {
+            --primary-color: #e92828d2; /* Vermelho da Poki */
+            --secondary-color: #232323; /* Preto escuro */
+            --background-color: #f0f0f0; /* Fundo cinza claro */
+            --background-image: url('https://cdn.discordapp.com/attachments/1188974807350509640/1250926397220720660/360_F_417440234_w6uhv93WE60EYsYy.png?ex=666cb77e&is=666b65fe&hm=bb6bb5706cb03f76e7e301050b23b4c5256506ae800836036710968a76b8aaaf&');
+            --navbar-bg: rgba(0, 0, 0, 0.5); /* Fundo semitransparente para a navbar */
+            --games-section-bg: #ffffff; /* Fundo branco da seção de jogos */
+            --game-bg: #f7f7f7; /* Fundo dos cards de jogo */
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: var(--background-image);
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: var(--navbar-bg);
+            padding: 10px 20px;
+            border-radius: 15px;
+            margin: 10px;
+        }
+
+        .navbar a, .navbar button {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 18px;
+            background-color: var(--primary-color);
+            border: none;
+            cursor: pointer;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .navbar a:hover, .navbar button:hover {
+            background-color: #8b1a1a; /* Tom mais escuro ao passar o mouse */
+        }
+
+        .navbar img {
+            max-height: 50px;
+        }
+
+        .games-section {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding: 20px;
+            background-color: var(--games-section-bg);
+            margin: 20px;
+            border-radius: 10px;
+            overflow-y: auto;
+            max-height: 80vh;
+            scrollbar-color: var(--primary-color) var(--background-color);
+            scrollbar-width: thin;
+        }
+
+        .game {
+            flex: 1 0 calc(25% - 20px);
+            margin: 10px;
+            padding: 20px;
+            background-color: var(--game-bg);
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .game img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .play-button {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: var(--primary-color);
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+            cursor: pointer;
+            border: none;
+        }
+
+        .play-button:hover {
+            background-color: #a50707d8; /* Tom mais escuro ao passar o mouse */
+        }
+    </style>
+
+</head>
+<body>
+
+    <header class="navbar">
+        <nav>
+            <a href="home.html">Home</a>
+            <a href="discovery.html">Discovery</a>
+        </nav>
+        <div>
+            <span style="color: white;">Logged in as: <strong id="loggedInUser"></strong></span>
+            <a href="#" onclick="logout()">Logout</a>
+            <img src="https://cdn.discordapp.com/attachments/1175494981524394014/1250866806252507166/Legendary_GAMES-removebg-preview.png?ex=666c7ffe&is=666b2e7e&hm=3cf382c0a5e030bfc5f7bf5a6a9c6127bb3ece22fb995a73b719c15195bb38d4&" alt="Logo">
+        </div>
+    </header>
+
+    <main class="games-section" id="gamesSection">
+<div class="game">
+<img src="https://cdn.discordapp.com/attachments/1245487379184353353/1253776379481428019/20240620_114154_0000.png?ex=667715be&is=6675c43e&hm=290fed4fa37b1ec1225d04adbebfe7e9998480248398a1717624d11100402c13&" alt="Soccer">
+<button onclick="window.location.href='soccer.html'" class="play-button">Jogar</button>
+</div>
+<div class="game">
+<img src="https://cdn.discordapp.com/attachments/1245487379184353353/1253776379233833071/20240620_114140_0000.png?ex=667715be&is=6675c43e&hm=7b926d763dabb41a0a94218cb67479dd5a7860d9495128c0841e091c17c43a04&" alt="PartyToons">
+<button onclick="window.location.href='game20.html'" class="play-button">Jogar</button>
+</div>
+<div class="game">
+<img src="https://lh3.googleusercontent.com/pw/AP1GczOVm2IgGO6SaBdPduPjf_1FPrEDqIZD6ZMmW6Hv7FejkPgiAx5cfjjGzwsOlyiaWegAHvSVI99oHLPmhNdntVTt_Tu-i6AkmIvlZlWEAlZC8YwXrBKR8NLP7d5szClYfI7nnmSdl_M_5MluCMpK9SSo=w144-h108-s-no-gm?authuser=0" alt="DriveMad">
+<button onclick="window.location.href='drive-mad.html'" class="play-button">Jogar</button>
+</div>
+<div class="game">
+<img src="https://cdn.discordapp.com/attachments/1245487379184353353/1253776379674361933/20240620_114220_0000.png?ex=667715be&is=6675c43e&hm=a287d017267d89155dd3ad7705c820d6618bc4e569d48a21555fdd2fca1e47ac&" alt="Crazy Cars">
+<button onclick="window.location.href='Crazy-Cars.html'" class="play-button">Jogar</button> 
+</div>
+<div class="game">
+    <img src="https://cdn.discordapp.com/attachments/1245487379184353353/1253776379896533063/20240620_114320_0000.png?ex=667715bf&is=6675c43f&hm=f5d088c08c2a2d26d42de3435bd04fd1fad859903f841bb29b26bfaf4957c352&" alt="Poor Buny">
+    <button onclick="window.location.href='poor-Buny.html'" class="play-button">Jogar</button> 
+    </div>
+    <div class="game">
+        <img src="https://cdn.discordapp.com/attachments/1245487379184353353/1253776380194459750/20240620_114349_0000.png?ex=667715bf&is=6675c43f&hm=05f0197882d9bb792026c56d9c027f0ed54ecf3da727cb4d4954ab18a94d6b2e&" alt="EUGENE">
+        <button onclick="window.location.href='eugene.html'" class="play-button">Jogar</button> 
+        </div>
+        <div class="game">
+            <img src="https://cdn.discordapp.com/attachments/1245487379184353353/1253776380500639834/20240620_115742_0000.png?ex=667715bf&is=6675c43f&hm=81893f47068d05ffb59e7bac7b2d16c01b24080cb39b09a9c30609568b9a4acf&" alt="Animal-Arena">
+            <button onclick="window.location.href='Minibattles.html'" class="play-button">Jogar</button> 
+            </div>
+        </div>
+        <div class="game">
+            <img src="" alt="MINIBTATTLES">
+            <button onclick="window.location.href='Animal-Arena.html'" class="play-button">Jogar</button> 
+            </div>
+        </div>
+        <div class="game">
+            <img src="https://cdn.discordapp.com/attachments/1245487379184353353/1253776378843762730/20240620_115804_0000.png?ex=667715be&is=6675c43e&hm=814e0b615fa0b5f38f2dbb6bcf1238b3eca394f5e09e2404bcac90ffd5e3da80&" alt="moto X3M">
+            <button onclick="window.location.href='moto-x3m.html'" class="play-button">Jogar</button> 
+            </div>
+        </div>
+        <div class="game">
+            <img src="https://play-lh.googleusercontent.com/pnXmDv1EejvB…cTurdkVpsoqIHsXjIVJ_E9ZLo7RvvLTSoM8U=w540-h302-rw" alt="fancade">
+            <button onclick="window.location.href='Fancade.html'" class="play-button">Jogar</button> 
+            </div>
+        </div>
+        <div class="game">
+            <img src="https://cdn.discordapp.com/attachments/1245487379184353353/1253776378512539680/20240620_115834_0000.png?ex=667715be&is=6675c43e&hm=62d36fba7b3531beb50a1df2deaeabaa63e85dabb36e1ce01f9753b0405c1992&" alt="idle">
+            <button onclick="window.location.href='Idle.html'" class="play-button">Jogar</button> 
+            </div>
+            <div class="game">
+                <img src="https://cdn.discordapp.com/attachments/1245487379184353353/1253776378218807417/20240620_115906_0000.png?ex=667715be&is=6675c43e&hm=e2ebf5558b1f73a2fe533d44591d225b746835735c1e83817a332b951c2292be&" alt="bumper">
+                <button onclick="window.location.href='bumper.html'" class="play-button">Jogar</button> 
+                </div>
+                <div class="game">
+                    <img src="https://cdn.discordapp.com/attachments/1245487379184353353/1253776378512539680/20240620_115834_0000.png?ex=667715be&is=6675c43e&hm=62d36fba7b3531beb50a1df2deaeabaa63e85dabb36e1ce01f9753b0405c1992&" alt="idle">
+                    <button onclick="window.location.href='Idle.html'" class="play-button">Jogar</button> 
+                    </div>
+</main>
+
+</body>
+</html>

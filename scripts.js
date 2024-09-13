@@ -19,7 +19,7 @@ function goFullScreen() {
 
 // Função para voltar à página inicial
 function goBack() {
-    window.location.href = '/index.html';
+    window.location.href = 'index.html';
 }
 
 // Sistema de pesquisa de jogos
