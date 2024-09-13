@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Legendary Games </title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#">Categorias</a></li>
+            <li><a href="#">Favoritos</a></li>
+            <li><a href="#">Sobre</a></li>
+        </ul>
+    </nav>
+
+    <div class="content">
+        <header>
+            <h1>Jogos Divertidos</h1>
+            <input type="text" id="searchBar" placeholder="Pesquisar jogos...">
+        </header>
+
+        <section id="game-list">
+            <div class="game" onclick="openGame('jogos/arena.html')">                <p class="game-title">Arena</p>
+
+                <img src="/Imagens/jogos-imagens/arena.png" alt="Jogo 1">
+            </div>
+            <div class="game" onclick="openGame('jogos/tetris.html')">
+                <p class="game-title">Tetris</p>
+                <img src="/Imagens/jogos-imagens/tetris.png" alt="Jogo 2">               
+            </div>
+            <div class="game" onclick="openGame('jogos/rungun.html')">
+                <p class="game-title">Run Gun</p>
+                <img src="/Imagens/jogos-imagens/rungun.png" alt="Jogo 2">               
+            </div>
+            <!-- Mais jogos -->
+        </section>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
